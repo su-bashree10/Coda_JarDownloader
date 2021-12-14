@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="profile.js"></script>
+        <style>
+            .container1{
+                background-color: #4B8DF0;
+                width:40%;
+                height: 100%;
+                align-items:center;
+                font-family: Simonetta;
+                color: #fff;
+                text-align: left;
+                padding-top:40px;
+                padding-left:10px;
+                color:#fff
+            }
+            body{
+                width: 100%;
+                display:inline-flex;
+                height:100%;
+                margin:0px;
+            }
+            .container2{
+                width:60%;
+                height: 100%;
+                align-items:left;
+                text-align: right;
+                font-family: Simonetta;
+                padding-top: 10px;
+                padding-right: 50px;
+            }
+            .field {
+                border-width: 0px 0px 1px;
+                border-color: #DADADA;
+                font-size: 22px;
+                text-align: left;
+                letter-spacing: 0px;
+                color: #000000;
+                padding-bottom: 5px;
+                min-width:400px;
+                font-weight:bold;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <center>
+            <h1 id="username"></h1>
+            <br><br><br><br>
+            <h3 style="cursor: pointer;">Personal Information</h3>
+            <br><br>
+            <h3 style="cursor: pointer;" onclick="location.href='viewstatus.html'">Jars Uploaded</h3>
+            <br><br>
+            <h3 style="cursor: pointer;" onclick="location.href='lovereceived.html'">Love Received</h3></center>
+        </div>
+        <div class="container2">
+           <button type="button" class="btn btn-primary" style="background-color: #4B8DF0;font-size:20px;" onclick="location.href='editprofile.html'">Update Profile</button>
+
+            <center>
+                <h1 style="color:#4B8DF0">Personal Information</h1>
+                <br>
+                <br>
+                <br>
+                <div class="row" style="padding-left:30px;">
+                    <div class="col-md-4">
+                        <h3 style="color:#000000;text-align:right;">Name:</h3>
+                    </div>
+                    <div class="col-md-8" style="align-items: left;padding-right:75px;">
+                        <input class="field" id="name" type="text" required>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row" style="padding-left:30px;">
+                    <div class="col-md-4">
+                        <h3 style="color:#000000;text-align:right;">Email:</h3>
+                    </div>
+                    <div class="col-md-8" style="align-items: left;padding-right:75px;">
+                        <input class="field" id="mail" type="text" required>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row" style="padding-left:30px;">
+                    <div class="col-md-4">
+                        <h3 style="color:#000000;text-align:right;">Bank Account:</h3>
+                    </div>
+                    <div class="col-md-8" style="align-items: left;padding-right:75px;">
+                        <input class="field" id="account" type="text" required>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

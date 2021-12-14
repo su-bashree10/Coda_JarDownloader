@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="lovereceived.js"></script>
+        <style>
+            .container1{
+                background-color: #4B8DF0;
+                width:40%;
+                height: 100%;
+                align-items:center;
+                font-family: Simonetta;
+                color: #fff;
+                text-align: left;
+                padding-top:40px;
+                padding-left:10px;
+                color:#fff
+            }
+            body{
+                width: 100%;
+                display:inline-flex;
+                height:100%;
+                margin:0px;
+            }
+            .container2{
+                width:60%;
+                height: 100%;
+                align-items:left;
+                text-align: right;
+                font-family: Simonetta;
+                padding-top: 10px;
+                padding-right: 50px;
+            }
+            .field {
+                border-width: 0px 0px 1px;
+                border-color: #DADADA;
+                font-size: 22px;
+                text-align: left;
+                letter-spacing: 0px;
+                color: #000000;
+                padding-bottom: 5px;
+                min-width:400px;
+                font-weight:bold;
+            }
+            .container{
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <center>
+            <h1 id="username"></h1>
+            <br><br><br><br>
+            <h3 style="cursor: pointer;" onclick="location.href='profile.html'">Personal Information</h3>
+            <br><br>
+            <h3 style="cursor: pointer;" onclick="location.href='viewstatus.html'">Jars Uploaded</h3>
+            <br><br>
+            <h3 style="cursor: pointer;">Love Received</h3></center>
+        </div>
+        <div class="container2">
+            <center>
+                <h1 style="color:#4B8DF0">Love Received</h1>
+                <div class="container">
+                    <table class="table">
+                        <thead  style="background-color:#4B8DF0;color:#fff;text-align: center;">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">For</th>
+                            <th scope="col">Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tabledata" style="color:#000000;text-align: center;">
+                
+                        </tbody>
+                    </table>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

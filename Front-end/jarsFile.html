@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+      <title>Jar Downloader</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="downloadjar.js"></script>
+  <style>
+    html{
+      background-color: #4B8DF0;
+    }
+    .card{
+      margin: 10px;
+    }
+    .container{
+      padding-left: 35px;
+    }
+    body{
+      font-family: 'Simonetta', cursive;
+      margin: 20px;
+      border-radius: 25px;
+    }
+  </style>
+</head>
+    <body>    
+       <div class="container" style="align-items: center; margin-bottom: 10px;">
+        <div class="input-group" style=" margin-top: 30px;">
+          <h1 style="color:#4B8DF0;padding-right:150px;">Jar Downloader</h1>
+          <div class="form-outline" style="padding-top:10px;">
+            <input type="text" id="searchbar" style="min-width:280px;" name="searchbar" class="form-control" placeholder="Search Jar Files"/>
+          </div>
+          <!--<button type="button" class="btn btn-primary" style="background-color: #4B8DF0;">
+            Search
+          </button>-->
+          <span style="padding-left:200px;"><button type="button" class="btn btn-primary" style="background-color: #4B8DF0;font-size:15px;" onclick="upload()">
+            Upload Jar
+          </button>
+          <img src="https://icons.veryicon.com/png/o/miscellaneous/two-color-icon-library/user-286.png" style="cursor: pointer;" onclick="viewprofile()" width="50" height="50" padding="20px">
+          <img src="https://img.icons8.com/external-sbts2018-flat-sbts2018/2x/external-logout-social-media-basic-1-sbts2018-flat-sbts2018.png" style="cursor:pointer;" onclick="logout()" width="40" height="40" padding="20px">
+        </span>
+        </div>
+       </div>   
+      <div class="container" style="max-width:1000px;padding-left:60px;">
+        <div class="row" id="row">
+            
+        </div>
+      </div>
+      <script>
+        function upload(){
+          var id=sessionStorage.getItem("currentLoginId");
+          if(id===null||id===""){
+            alert("Login to Upload Jar Files");
+            window.location.href="login.html";
+          }
+          else{
+            window.location.href="uploadjarfile.html";
+          }
+        }
+        function logout(){
+          sessionStorage.setItem("currentLoginId","");
+          sessionStorage.setItem("currentLoginmail","");
+          window.location.href="front.html";
+        }
+        function viewprofile(){
+          var id=sessionStorage.getItem("currentLoginId");
+          if(id===null||id===""){
+            alert("Login to View your Profile");
+            window.location.href="login.html";
+          }
+          else{
+            window.location.href="profile.html";
+          }
+        }
+        </script>
+    </body>
+    </html>

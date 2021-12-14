@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="login.js" type="module"></script>
+        <style>
+            .container1{
+                background-color: #4B8DF0;
+                width:35%;
+                height: 100%;
+                align-items:center;
+                font-family: Simonetta;
+                color: #fff;
+                text-align: center;
+                padding:50px;
+            }
+            body{
+                width: 100%;
+                display:inline-flex;
+                height:100%;
+                margin:0px;
+            }
+            .container2{
+                width:65%;
+                height: 100%;
+                align-items:center;
+                text-align: center;
+                font-family: Simonetta;
+                padding-top: 100px;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            .alert-box {
+	            padding: 15px;
+                margin-bottom: 20px;
+                border: 1px solid transparent;
+                border-radius: 4px;  
+            }
+
+            .success {
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+                display: none;
+            }
+            .failure {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: none;
+}
+        </style>
+    </head>
+    <body>
+        
+        <div class="container1">
+            <h1>JAR Downloader</h1>
+            <br><br><br><br><br>
+            <h1>Welcome!!!</h1>
+            <br><br>
+            <h3>One place to Download all Jarfiles</h3>
+            <br>
+            <button type="button" style="background-color:#fff;color:#4B8DF0;font-size: 25px;" onclick="location.href='signup.html'" class="btn btn-primary">Sign Up</button>
+            <br> <br>
+            <h5>If you are new to this Website</h5>
+        </div>
+        <div class="container2">
+            <div class="alert-box success" id="popup">Login Successful !!!</div>
+            <div class="alert-box failure" id="popup1"></div>
+            <br>
+            <h1 style="color:#4B8DF0;font-size: 50px;">Login Here</h1>
+            <br>
+            <input type="email" class="form-control" style="background-color: #F5F5F5;font-size:20px;" id="mail" placeholder="Enter Email" required>
+            <br><br>
+            <input type="password" class="form-control" style="background-color: #F5F5F5;font-size:20px;" id="pass" placeholder="Enter Password" required>
+            <br><br>
+            <button type="button" id="donelogin" style="background-color: #4B8DF0;color:#fff;font-size:25px; min-width:530px;border-radius:20px;" class="btn btn-primary">Login</button>
+        </div>
+    </body>
+</html>

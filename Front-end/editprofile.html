@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="editprofile.js" type="module"></script>
+        <script src="editprofilecall.js"></script>
+        <style>
+            .container1{
+                background-color: #4B8DF0;
+                width:35%;
+                height: 100%;
+                align-items:center;
+                font-family: Simonetta;
+                color: #fff;
+                text-align: center;
+                padding:50px;
+            }
+            body{
+                width: 100%;
+                display:inline-flex;
+                height:100%;
+                margin:0px;
+            }
+            .container2{
+                width:65%;
+                height: 100%;
+                align-items:center;
+                text-align: center;
+                font-family: Simonetta;
+                padding-top: 40px;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container1">
+            <h1>JAR Downloader</h1>
+            <br><br><br><br><br>
+            <h3 onclick="location.href='changepassword.html'" style="cursor:pointer;">Change/Forgot Password</h1>
+            <br><br>
+            <h3 onclick="location.href='addbank.html'" style="cursor:pointer;">Add Bank Account Details</h3>
+            <br>
+            <!--<button type="button" style="background-color:#fff;color:#4B8DF0;font-size: 25px;" onclick="location.href='login.html'" class="btn btn-primary">Sign In</button>
+            <br> <br>
+            <h5>If you already have an account</h5>-->
+        </div>
+        <div class="container2">
+            <h1 style="color:#4B8DF0;font-size: 50px;">Edit Profile</h1><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" style="background-color: #F5F5F5;font-size:20px;" id="name" placeholder="Enter Name">
+                        <br>
+                    </div>
+                    
+                </div>
+               <div class="row">
+                   <div class="col">
+                        <input type="email" class="form-control" style="background-color: #F5F5F5;font-size:20px;" id="mail" placeholder="Enter Email">
+                        <br>
+                   </div>
+               </div>
+                <div class="row" style="padding-bottom:20px;">
+                    <div class="col-md-8" style="min-width:200px;">
+                        <input type="text" class="form-control" style="background-color: #F5F5F5;font-size:20px;min-width:400px;" id="mobile" placeholder="Enter Mobile Number">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" id="sendotp" style="background-color:#4B8DF0;color:#fff;border-radius: 20px;" class="btn btn-primary"  onclick="sendOTP()">Get OTP</button>
+                    </div>
+                    <br><br>
+                </div>
+                <div class="row"  style="padding-bottom:20px;">
+                    <div class="col-md-8" style="min-width:200px;">
+                        <input type="text" class="form-control" style="background-color: #F5F5F5;font-size:20px; min-width:400px;" id="otp" placeholder="Enter OTP">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" id="verify" style="background-color:#4B8DF0;color:#fff;border-radius: 20px;" class="btn btn-primary" onclick="verifyOTP()">Verify OTP</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="clicked" style="background-color:#4B8DF0;color:#fff;font-size:25px; min-width:530px;border-radius:20px;" class="btn btn-primary">Update</button>
+        </div>
+        <script>
+            document.getElementById("clicked").disabled=true;
+            function sendOTP(){
+              sendOTPsoon();
+            }
+            function verifyOTP(){
+              var res=verifyOTPsoon();
+              if(res=="success"){
+                document.getElementById("clicked").disabled=false;
+              }
+              else{
+                document.getElementById("clicked").disabled=true;
+              }
+            }
+        </script>
+    </body>
+</html>

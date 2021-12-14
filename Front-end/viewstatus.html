@@ -1,0 +1,78 @@
+<html lang="en">
+    <head>
+      <title>Jar Downloader</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Simonetta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="viewstatus.js"></script>
+  <style>
+    .card{
+      margin: 10px;
+    }
+    .container{
+      padding-left: 35px;
+    }
+    body{
+      font-family: 'Simonetta',cursive;
+      margin: 20px;
+      border-radius: 25px;
+    }
+    html{
+      background-color: #4B8DF0;
+    }
+    .alert-box {
+	            padding: 15px;
+                margin-bottom: 20px;
+                border: 1px solid transparent;
+                border-radius: 4px;  
+    }
+
+    .success {
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+                display: none;
+    }
+    .failure {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: none;
+    }
+  </style>
+</head>
+    <body>    
+        
+       <div class="container" style="align-items: center; margin-bottom: 10px;padding-top:2px;">
+        <div class="input-group" style="margin-left:50px; margin-top: 30px;">
+          <h1 style="color:#4B8DF0;">Jar Downloader</h1>
+          <div class="form-outline" style="padding-left:100px;min-width:100px;">
+            <div class="alert-box success" id="popup">Deleted Jar File, Refresh please!!!</div>
+            <div class="alert-box failure" id="popup1"></div>
+            <input type="search" id="form1" class="form-control" style="min-width:200px;" placeholder="Search Jar Files"/>
+          </div>
+          <span style="padding-left:250px;">
+            <button type="button" class="btn btn-primary" style="background-color:#4B8DF0;font-size:15px;" id="generatepdf" onclick="getpdf()">
+              Download PDF
+            </button>
+            <button type="button" class="btn btn-primary" style="background-color: #4B8DF0;font-size:15px;" id="generateexcel" onclick="getexcel()">
+              Download Excel
+            </button>
+        </span>
+        </div>
+       </div>   
+      <div class="container" style="max-width:1000px;">
+        <div class="row" id="row">
+            
+        </div>
+      </div>
+      
+    </body>
+    </html>

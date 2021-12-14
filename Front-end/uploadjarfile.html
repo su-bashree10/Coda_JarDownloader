@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>JAR Downloader</title>
+    <link rel="stylesheet" href="uploadjarfile.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="uploadjarfile.js"></script>
+     <style>
+       .button{
+                text-align:center;
+            }
+            .button--loading::after {
+                content: "";
+                position:absolute;
+                width: 60px;
+                height: 60px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                border: 4px solid transparent;
+                border-top-color: #4B8DF0;
+                border-radius: 50%;
+                animation: button-loading-spinner 1s ease infinite;
+            }
+            @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+            }
+            .alert-box {
+	            padding: 15px;
+                margin-bottom: 20px;
+                border: 1px solid transparent;
+                border-radius: 4px;  
+            }
+
+            .success {
+                color: #3c763d;
+                background-color: #dff0d8;
+                border-color: #d6e9c6;
+                display: none;
+            }
+            .failure {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: none;
+}
+     </style>
+   </head>
+<body>
+  <div class="container">
+    <div class="alert-box success" id="popup">File Uploaded Successfully!!!</div>
+    <div class="alert-box failure" id="popup1"></div>
+    <div class="title"><b>Upload JAR Files</b></div>
+    <br>
+    <div class="content">
+      
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" style="font-size: 20px;">Jar File Name:</span>
+            <input type="text" id="name" name="jarFileName" placeholder="Enter JAR File Name" required>
+          </div>
+          <br>
+            <div class="input-box">
+            <span class="details" style="font-size: 20px;">Version:</span>
+            <input type="text" id="version" name="jarFileVersion" placeholder="Enter Version" required>
+          </div>
+          <br>
+          <div class="input-box">
+            <span class="details" style="font-size: 20px;">JAR File (As Zip File):</span>
+            <input type="file" id="jar" name="jarFile" placeholder="Upload your JAR File" required>
+          </div>
+          <br>
+          <div class="input-box">
+            <span class="details" style="font-size: 20px;">Description:</span><br>
+            <textarea name="jarFileDescription" id="description" rows="6"  placeholder="About your JAR File" required></textarea>
+          </div>
+          <br>
+        </div>
+        <center><button class="button button-22" onclick="callfunction()" role="button" style="font-family: Simonetta;width: 300px;font-size:20px;padding-left:100px;"><span class="button__text">Upload JAR</span></button></center>
+    </div>
+  </div>
+  <script>
+    function callfunction(){
+      console.log("hello...working");
+      sendjars();
+    }
+    const theButton = document.querySelector(".button");
+
+            theButton.addEventListener("click", () => {
+                    theButton.classList.add("button--loading");
+            });
+    </script>
+</body>
+</html>
+
+	
