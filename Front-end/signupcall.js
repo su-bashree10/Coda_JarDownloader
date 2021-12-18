@@ -32,6 +32,10 @@ const callApiVerifyOtp=async(phone,otp)=>{
             console.log(data.message);
             console.log("verified successfully")
         }
+        else{
+            document.getElementById("popup1").innerHTML=data.message;
+            document.getElementById("popup1").style.display="block";
+        }
     })
     .catch(err => {
         console.log(err);
